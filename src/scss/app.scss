@@ -1,0 +1,233 @@
+@import "./_variables";
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
+@import "~noty/src/themes/light.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-smooth: auto;
+  color: $dark;
+}
+
+// Button
+.btn-primary {
+  background: $primary;
+  transition: $smooth;
+
+  &:hover {
+    background: $primary-hover;
+  }
+}
+
+// Link
+a.link {
+  color: $primary;
+}
+
+// Pizza Size
+.size {
+  background: $secondary;
+}
+
+// Noty added items
+.noty_theme__light {
+  border-radius: 50px !important;
+  padding-left: 8px !important;
+  margin-top: 10px !important;
+  bottom: 355px !important;
+  color: white !important;
+}
+
+// Layout & Home
+nav {
+  background-color: $pure;
+
+  li:last-child a {
+    background: $primary;
+    &:hover {
+      background: $primary-hover;
+    }
+  }
+
+  li a {
+    transition: $smooth;
+    &:hover {
+      color: $primary;
+    }
+    font-weight: bold;
+  }
+}
+
+section.hero {
+  background: $secondary;
+
+  & img {
+    width: 94% !important;
+  }
+}
+
+.add-to-cart {
+  border: 2px solid $primary;
+  color: $primary;
+  transition: $smooth;
+
+  &:hover {
+    background: $primary;
+    border-color: $pure;
+    color: $pure;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Cart
+section {
+  .cart {
+    background: $secondary;
+    .amount {
+      color: $primary;
+    }
+  }
+
+  .login {
+    background: $secondary;
+    min-height: 70vh;
+    a {
+      color: $primary;
+      &:hover {
+        color: $primary-hover;
+      }
+    }
+    input {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
+
+  #deleteCartButton {
+    color: $primary;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+// Hover Pizza
+section.menu img {
+  transition: transform 0.2s;
+  z-index: -1;
+}
+section.menu img:hover {
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+// Status Page
+
+section.status {
+  background: $secondary;
+  min-height: 735px;
+}
+
+.status-box ul {
+  list-style-type: disc;
+  margin-left: 84px;
+}
+
+// Icons
+.status-box ul li span:before {
+  font-family: "Line Awesome Free";
+  font-size: 46px;
+  font-weight: 600;
+  position: absolute;
+  left: -90px;
+  color: inherit;
+}
+.status-box ul li:nth-child(1) span:before {
+  content: "\f46c";
+}
+
+.status-box ul li:nth-child(2) span:before {
+  content: "\f560";
+}
+
+.status-box ul li:nth-child(3) span:before {
+  content: "\f818";
+}
+
+.status-box ul li:nth-child(4) span:before {
+  content: "\f0d1";
+}
+
+.status-box ul li:nth-child(5) span:before {
+  content: "\f582";
+}
+
+.status-box ul li {
+  position: relative;
+}
+
+// Line
+.status-box ul li:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -18.6px;
+  width: 2px;
+  height: 70%;
+  background: $dark;
+  margin-top: 10px;
+}
+
+.status-box ul li:nth-child(4):before {
+  height: 90%;
+}
+
+.status-box ul li:nth-child(5):before {
+  background: $secondary;
+}
+
+// Order Completed
+.status-box ul li.step-completed:before {
+  background: $gray;
+}
+
+.step-completed {
+  color: $gray;
+}
+
+// Order Current Status
+
+.current {
+  color: $primary;
+}
+
+.status-box ul li time {
+  float: right;
+  font-size: 18px;
+  color: $dark;
+}
+
+// Responsive
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-box ul li span:before {
+    font-size: 34px;
+  }
+}
